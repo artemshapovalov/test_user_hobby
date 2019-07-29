@@ -1,0 +1,95 @@
+@import "../../ui-kit/styles/variables.scss";
+
+.home {
+    border: 1px solid;
+
+    &__header {
+        border-bottom: 1px solid;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.5;
+        padding: 10px;
+    }
+
+    &__body,
+    &__controls,
+    &__row {
+        display: flex;
+    }
+
+    &__controls {
+        border-bottom: 1px solid;
+        background-color: $color-main;
+    }
+
+    &__column {
+        flex: 1 0 auto;
+        min-width: 300px;
+        & + & {
+            border-left: 1px solid;
+        }
+    }
+
+    &__row {
+        background-color: $color-main;
+        border-bottom: 1px solid;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__cell {
+        border-right: 1px solid;
+        flex: 1 0 auto;
+        height: 32px;
+        overflow: hidden;
+        padding: 9px 8px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+        &--selected {
+            box-shadow: 0px 0px 4px inset blue;
+        }
+
+        &--selectable {
+            transition: background-color .3s;
+
+            &:hover {
+                background-color: $cell-hover-color;
+                cursor: pointer;
+                transition-duration: 0s;
+            }
+        }
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    &__input {
+        -webkit-appearance: none;
+        background: none;
+        border-radius: 0;
+        border: none;
+        border-right: 1px solid;
+        flex: 1 0 auto;
+        flex-basis: 30%;
+        font-size: 13px;
+        min-width: 30%;
+        outline: none;
+        padding: 8px;
+        text-align: center;
+    }
+
+    &__passion,
+    &__hobby,
+    &__year {
+        flex-basis: 30%;
+        min-width: 30%;
+    }
+
+    &__delete {
+        display: flex;
+        flex-basis: 10%;
+        min-width: 10%;
+    }
+}

@@ -1,0 +1,40 @@
+@import "../../ui-kit/styles/variables.scss";
+
+.resizable-tiles {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+
+    &__panel {
+        background: $panel-bg-color;
+        border: 1px solid $panel-border-color;
+        flex: 1 0 auto;
+        max-height: calc(100vh - 65px);
+        overflow: auto;
+    }
+
+    &__resizer {
+        background: $resizer-bg-color;
+        cursor: col-resize;
+        flex-shrink: 0;
+        position: relative;
+        user-select: none;
+
+        &::after,
+        &::before {
+            content: "";
+            display: inline-block;
+            border-left: 1px solid $resizer-divider-color;
+            height: 20px;
+            margin: 0 2px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-100%);
+        }
+
+        &::before {
+            left: 0;
+        }
+    }
+}

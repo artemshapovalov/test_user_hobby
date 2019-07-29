@@ -1,0 +1,39 @@
+@import "../../styles/variables.scss";
+
+.Button {
+    background-color: $button-bg-color;
+    border: none;
+    border-radius: 0;
+    color: $button-color;
+    flex-basis: 10%;
+    outline: none;
+    transition: color, background-color, border-color, .3s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $button-bg-color-hover;
+    }
+
+    &:active {
+        color: $button-color-active;
+    }
+    &--close {
+        background-color: $button-close-bg-color;
+        border: 4px solid $button-close-border-color;
+        display: block;
+        flex: none;
+        height: 16px;
+        margin: auto;
+        padding: 0;
+        width: 16px;
+
+        &:hover {
+            background-color: $button-close-bg-color-hover;
+        }
+
+        &:active {
+            border-color: $button-close-border-color-active;
+            color: inherit;
+        }
+    }
+}

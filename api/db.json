@@ -1,0 +1,25 @@
+{
+  "user": [
+    {
+      "name": "Ben Snow",
+      "id": "23dFcrv"
+    },
+    {
+      "name": "Tom Fox",
+      "id": "EqKoZ4e"
+    },
+    {
+      "name": "Jack Snow",
+      "id": "xnVSvxD"
+    }
+  ],
+  "hobby": [
+    {
+      "name": "Coding",
+      "passion": "low",
+      "year": "2001",
+      "userId": "23dFcrv",
+      "id": "EBnCKMK"
+    }
+  ]
+}

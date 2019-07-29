@@ -1,0 +1,2 @@
+export const APP_INITIALIZED = 'APP_INITIALIZED';
+
